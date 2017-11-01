@@ -105,7 +105,7 @@
             // 
             // addMovieButton
             // 
-            this.addMovieButton.Location = new System.Drawing.Point(12, 196);
+            this.addMovieButton.Location = new System.Drawing.Point(13, 396);
             this.addMovieButton.Name = "addMovieButton";
             this.addMovieButton.Size = new System.Drawing.Size(286, 23);
             this.addMovieButton.TabIndex = 7;
