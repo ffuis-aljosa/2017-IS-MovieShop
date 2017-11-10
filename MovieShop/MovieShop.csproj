@@ -50,7 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DbConnection.cs" />
     <Compile Include="Movie.cs" />
+    <Compile Include="MovieRepository.cs" />
     <Compile Include="MoviesForm.cs">
       <SubType>Form</SubType>
     </Compile>
