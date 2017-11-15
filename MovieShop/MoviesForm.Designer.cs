@@ -81,14 +81,6 @@
             // genreComboBox
             // 
             this.genreComboBox.FormattingEnabled = true;
-            this.genreComboBox.Items.AddRange(new object[] {
-            "Akcija",
-            "Horor",
-            "Drama",
-            "Komedija",
-            "Triler",
-            "Krimi",
-            "Romantika"});
             this.genreComboBox.Location = new System.Drawing.Point(13, 131);
             this.genreComboBox.Name = "genreComboBox";
             this.genreComboBox.Size = new System.Drawing.Size(285, 21);

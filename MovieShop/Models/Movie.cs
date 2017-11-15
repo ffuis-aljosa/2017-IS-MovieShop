@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MovieShop.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,18 +9,20 @@ namespace MovieShop
 {
     class Movie
     {
+        private int id;
         private string title;
         private int year;
-        private string genre;
+        private Genre genre;
 
-        public Movie(string title, int year, string genre)
+        public Movie(int id, string title, int year, Genre genre)
         {
+            this.id = id;
             Title = title;
             Year = year;
             Genre = genre;
         }
 
-        public Movie(string title, string year, string genre)
+        public Movie(string title, string year, Genre genre)
         {
             Title = title;
             Genre = genre;
@@ -31,6 +34,13 @@ namespace MovieShop
                 throw new Exception("Neispravna godina produkcije");
 
             Year = yearInt;
+        }
+
+        public int Id {
+            get
+            {
+                return id;
+            }
         }
 
         public string Title {
@@ -61,23 +71,20 @@ namespace MovieShop
             }
         }
 
-        public string Genre {
+        public Genre Genre {
             get
             {
                 return genre;
             }
             set
             {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Žanr filma ne može biti prazan");
-
                 genre = value;
             }
         }
 
         public override string ToString()
         {
-            return title + " " + year + " " + genre;
+            return title + " " + year + " " + genre.Name;
         }
     }
 }

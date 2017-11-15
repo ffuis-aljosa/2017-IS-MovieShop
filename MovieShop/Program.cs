@@ -16,7 +16,7 @@ namespace MovieShop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MoviesForm());
+            Application.Run(new LoginForm());
         }
     }
 }
