@@ -11,9 +11,7 @@ namespace MovieShop
         public MoviesForm()
         {
             InitializeComponent();
-
             loadMovies();
-            loadGenres();
         }
 
         private void loadMovies()
@@ -26,32 +24,23 @@ namespace MovieShop
                 moviesListBox.Items.Add(movie);
         }
 
-        private void loadGenres()
-        {
-            List<Genre> genres = GenreRepository.fetchAllGenres();
-
-            foreach (Genre genre in genres)
-                genreComboBox.Items.Add(genre);
-        }
-
         private void addMovieButton_Click(object sender, EventArgs e)
         {
-            try
+            AddMovieForm addMovieForm = new AddMovieForm();
+            DialogResult result = addMovieForm.ShowDialog();
+
+            if (result == DialogResult.OK)
             {
-                Movie newMovie = new Movie(titleTextBox.Text, yearTextBox.Text, (Genre)genreComboBox.SelectedItem);
-
-                MovieRepository.createMovie(newMovie);
-
+                MovieRepository.createMovie(addMovieForm.NewMovie);
                 loadMovies();
+            }
+        }
 
-                titleTextBox.Text = "";
-                yearTextBox.Text = "";
-                genreComboBox.Text = "";
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsersForm usersForm = new UsersForm();
+
+            usersForm.Show();
         }
     }
 }

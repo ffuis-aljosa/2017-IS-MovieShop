@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MovieShop
 {
-    class Movie
+    public class Movie
     {
         private int id;
         private string title;

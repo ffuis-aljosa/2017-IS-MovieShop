@@ -2,7 +2,7 @@
 
 namespace MovieShop.Models
 {
-    class Genre
+    public class Genre
     {
         private int id;
         private string name;

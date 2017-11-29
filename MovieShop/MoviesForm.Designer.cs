@@ -29,71 +29,20 @@
         private void InitializeComponent()
         {
             this.moviesListBox = new System.Windows.Forms.ListBox();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.titleLabel = new System.Windows.Forms.Label();
-            this.yearTextBox = new System.Windows.Forms.TextBox();
-            this.yearLabel = new System.Windows.Forms.Label();
-            this.genreComboBox = new System.Windows.Forms.ComboBox();
-            this.genreLabel = new System.Windows.Forms.Label();
             this.addMovieButton = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // moviesListBox
             // 
             this.moviesListBox.FormattingEnabled = true;
-            this.moviesListBox.Location = new System.Drawing.Point(341, 12);
+            this.moviesListBox.Location = new System.Drawing.Point(341, 38);
             this.moviesListBox.Name = "moviesListBox";
-            this.moviesListBox.Size = new System.Drawing.Size(304, 407);
+            this.moviesListBox.Size = new System.Drawing.Size(304, 381);
             this.moviesListBox.TabIndex = 0;
-            // 
-            // titleTextBox
-            // 
-            this.titleTextBox.Location = new System.Drawing.Point(13, 13);
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(285, 20);
-            this.titleTextBox.TabIndex = 1;
-            // 
-            // titleLabel
-            // 
-            this.titleLabel.AutoSize = true;
-            this.titleLabel.Location = new System.Drawing.Point(13, 40);
-            this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(64, 13);
-            this.titleLabel.TabIndex = 2;
-            this.titleLabel.Text = "Naslov filma";
-            // 
-            // yearTextBox
-            // 
-            this.yearTextBox.Location = new System.Drawing.Point(13, 73);
-            this.yearTextBox.Name = "yearTextBox";
-            this.yearTextBox.Size = new System.Drawing.Size(285, 20);
-            this.yearTextBox.TabIndex = 3;
-            // 
-            // yearLabel
-            // 
-            this.yearLabel.AutoSize = true;
-            this.yearLabel.Location = new System.Drawing.Point(13, 100);
-            this.yearLabel.Name = "yearLabel";
-            this.yearLabel.Size = new System.Drawing.Size(93, 13);
-            this.yearLabel.TabIndex = 4;
-            this.yearLabel.Text = "Godina produkcije";
-            // 
-            // genreComboBox
-            // 
-            this.genreComboBox.FormattingEnabled = true;
-            this.genreComboBox.Location = new System.Drawing.Point(13, 131);
-            this.genreComboBox.Name = "genreComboBox";
-            this.genreComboBox.Size = new System.Drawing.Size(285, 21);
-            this.genreComboBox.TabIndex = 5;
-            // 
-            // genreLabel
-            // 
-            this.genreLabel.AutoSize = true;
-            this.genreLabel.Location = new System.Drawing.Point(13, 159);
-            this.genreLabel.Name = "genreLabel";
-            this.genreLabel.Size = new System.Drawing.Size(29, 13);
-            this.genreLabel.TabIndex = 6;
-            this.genreLabel.Text = "Žanr";
             // 
             // addMovieButton
             // 
@@ -105,24 +54,47 @@
             this.addMovieButton.UseVisualStyleBackColor = true;
             this.addMovieButton.Click += new System.EventHandler(this.addMovieButton_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.adminToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(657, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.usersToolStripMenuItem});
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(55, 20);
+            this.adminToolStripMenuItem.Text = "Admin";
+            // 
+            // usersToolStripMenuItem
+            // 
+            this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.usersToolStripMenuItem.Text = "Users";
+            this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
+            // 
             // MoviesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 436);
             this.Controls.Add(this.addMovieButton);
-            this.Controls.Add(this.genreLabel);
-            this.Controls.Add(this.genreComboBox);
-            this.Controls.Add(this.yearLabel);
-            this.Controls.Add(this.yearTextBox);
-            this.Controls.Add(this.titleLabel);
-            this.Controls.Add(this.titleTextBox);
             this.Controls.Add(this.moviesListBox);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "MoviesForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Filmoteka";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,13 +103,10 @@
         #endregion
 
         private System.Windows.Forms.ListBox moviesListBox;
-        private System.Windows.Forms.TextBox titleTextBox;
-        private System.Windows.Forms.Label titleLabel;
-        private System.Windows.Forms.TextBox yearTextBox;
-        private System.Windows.Forms.Label yearLabel;
-        private System.Windows.Forms.ComboBox genreComboBox;
-        private System.Windows.Forms.Label genreLabel;
         private System.Windows.Forms.Button addMovieButton;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usersToolStripMenuItem;
     }
 }
 
